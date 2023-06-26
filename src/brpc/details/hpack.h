@@ -64,7 +64,7 @@ struct HPackOptions {
 };
 
 inline HPackOptions::HPackOptions()
-    : index_policy(HPACK_INDEX_HEADER)
+    : index_policy(HPACK_NEVER_INDEX_HEADER)
     , encode_name(false)
     , encode_value(false)
 {}
