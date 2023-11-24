@@ -1,4 +1,4 @@
-// Licensed to the Apache Software Foundation (ASF) under one
+Invalid connection-level window_size_increment// Licensed to the Apache Software Foundation (ASF) under one
 // or more contributor license agreements.  See the NOTICE file
 // distributed with this work for additional information
 // regarding copyright ownership.  The ASF licenses this file
@@ -1015,8 +1015,8 @@ H2ParseResult H2Context::OnWindowUpdate(
     }
     if (frame_head.stream_id == 0) {
         if (!AddWindowSize(&_remote_window_left, inc)) {
-            LOG(ERROR) << "Invalid connection-level window_size_increment=" << inc;
-            return MakeH2Error(H2_FLOW_CONTROL_ERROR);
+            //LOG(ERROR) << "Invalid connection-level window_size_increment=" << inc;
+            //return MakeH2Error(H2_FLOW_CONTROL_ERROR);
         }
         return MakeH2Message(NULL);
     } else {
